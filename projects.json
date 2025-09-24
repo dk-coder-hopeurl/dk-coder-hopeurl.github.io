@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "电商管理系统",
+    "description": "基于Vue3和Element Plus开发的现代化电商后台管理系统，支持商品管理、订单处理、用户管理等功能。",
+    "category": "Web应用",
+    "tags": ["Vue3", "Element Plus", "TypeScript", "Vite"],
+    "url": "https://github.com/example/ecommerce-admin",
+    "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=250&fit=crop",
+    "date": "2024-03-15"
+  },
+  {
+    "id": 2,
+    "name": "任务管理工具",
+    "description": "简洁高效的任务管理应用，支持项目分组、进度跟踪、团队协作等功能，提升工作效率。",
+    "category": "工具应用",
+    "tags": ["React", "Node.js", "MongoDB", "Socket.io"],
+    "url": "https://github.com/example/task-manager",
+    "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=250&fit=crop",
+    "date": "2024-02-28"
+  },
+  {
+    "id": 3,
+    "name": "数据可视化平台",
+    "description": "强大的数据分析和可视化平台，支持多种图表类型，实时数据更新，帮助企业做出数据驱动的决策。",
+    "category": "数据分析",
+    "tags": ["D3.js", "Python", "Flask", "PostgreSQL"],
+    "url": "https://github.com/example/data-viz",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop",
+    "date": "2024-01-20"
+  },
+  {
+    "id": 4,
+    "name": "移动端社交应用",
+    "description": "基于React Native开发的跨平台社交应用，支持即时聊天、动态分享、位置服务等功能。",
+    "category": "移动应用",
+    "tags": ["React Native", "Firebase", "Redux", "Expo"],
+    "url": "https://github.com/example/social-app",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=250&fit=crop",
+    "date": "2024-04-10"
+  },
+  {
+    "id": 5,
+    "name": "AI聊天机器人",
+    "description": "集成GPT模型的智能聊天机器人，支持多轮对话、上下文理解、个性化回复等高级功能。",
+    "category": "人工智能",
+    "tags": ["Python", "OpenAI", "FastAPI", "WebSocket"],
+    "url": "https://github.com/example/ai-chatbot",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop",
+    "date": "2024-03-05"
+  },
+  {
+    "id": 6,
+    "name": "区块链钱包",
+    "description": "安全可靠的数字货币钱包应用，支持多种加密货币，提供转账、收款、交易记录等功能。",
+    "category": "区块链",
+    "tags": ["Solidity", "Web3.js", "Ethereum", "MetaMask"],
+    "url": "https://github.com/example/crypto-wallet",
+    "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=400&h=250&fit=crop",
+    "date": "2024-02-15"
+  }
+]

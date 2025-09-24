@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目展示</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 粒子效果背景 -->
+    <div id="particles-js"></div>
+
+    <div id="app">
+        <div class="container">
+            <header class="header">
+                <h1 class="title">
+                    <i class="fas fa-rocket"></i>
+                    项目展示
+                </h1>
+                <p class="subtitle">一些小小项目</p>
+            </header>
+
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input v-model="searchQuery" type="text" placeholder="搜索项目..." class="search-input">
+            </div>
+
+            <div class="filter-tabs">
+                <button v-for="category in categories" :key="category" @click="selectedCategory = category"
+                    :class="['filter-btn', { active: selectedCategory === category }]">
+                    {{ category }}
+                </button>
+            </div>
+
+            <div class="projects-grid">
+                <div v-for="project in filteredProjects" :key="project.id" class="project-card"
+                    @click="openProject(project.url)">
+                    <div class="project-image">
+                        <img :src="project.image || 'https://via.placeholder.com/300x200?text=项目图片'"
+                            :alt="project.name">
+                        <div class="project-overlay">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">{{ project.name }}</h3>
+                        <p class="project-description">{{ project.description }}</p>
+                        <div class="project-tags">
+                            <span v-for="tag in project.tags" :key="tag" class="tag">
+                                {{ tag }}
+                            </span>
+                        </div>
+                        <div class="project-meta">
+                            <span class="category">{{ project.category }}</span>
+                            <span class="date">{{ formatDate(project.date) }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div v-if="filteredProjects.length === 0" class="no-results">
+                <i class="fas fa-search"></i>
+                <p>没有找到匹配的项目</p>
+            </div>
+
+            <!-- 作者信息区域 -->
+            <div class="author-section">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
+                    alt="作者头像" class="author-avatar">
+                <h2 class="author-name">Hopeurl</h2>
+                <p class="author-title">全栈开发工程师 & 技术爱好者 & 浪漫幻想家</p>
+                <p class="author-bio">
+                    想自由的唱歌，想做一些浪漫的事情。
+                </p>
+                <div class="author-links">
+                    <a href="https://github.com" class="author-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="mailto:developer@example.com" class="author-link">
+                        <i class="fas fa-envelope"></i>
+                        邮箱联系
+                    </a>
+                    <a href="https://blog.example.com" class="author-link" target="_blank">
+                        <i class="fas fa-blog"></i>
+                        技术博客
+                    </a>
+                    <a href="https://linkedin.com" class="author-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 回到顶部按钮 -->
+        <button class="back-to-top" :class="{ visible: showBackToTop }" @click="scrollToTop" title="回到顶部">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
